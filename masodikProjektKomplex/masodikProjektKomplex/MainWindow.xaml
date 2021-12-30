@@ -12,11 +12,14 @@
             <ColumnDefinition Width="363*"/>
         </Grid.ColumnDefinitions>
         <Rectangle x:Name="elsoPalya" HorizontalAlignment="Left" Height="84" Margin="10,79,0,0" Stroke="Black" VerticalAlignment="Top" Width="685" Grid.ColumnSpan="2"/>
-        <Rectangle x:Name="masodikPalya" HorizontalAlignment="Left" Height="84" Margin="10,190,0,0" Stroke="Black" VerticalAlignment="Top" Width="685" Grid.ColumnSpan="2"/>
-        <Rectangle x:Name="harmadikPalya" HorizontalAlignment="Left" Height="86" Margin="10,309,0,0" Stroke="Black" VerticalAlignment="Top" Width="685" Grid.ColumnSpan="2"/>
+        <Rectangle x:Name="masodikPalya" HorizontalAlignment="Left" Height="84" Margin="10,163,0,0" Stroke="Black" VerticalAlignment="Top" Width="685" Grid.ColumnSpan="2"/>
+        <Rectangle x:Name="harmadikPalya" HorizontalAlignment="Left" Height="86" Margin="10,247,0,0" Stroke="Black" VerticalAlignment="Top" Width="685" Grid.ColumnSpan="2"/>
         <Button x:Name="Start" Content="Start" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="39" Width="96" Grid.ColumnSpan="2"/>
         <Button x:Name="ujFutam" Content="Új futam" HorizontalAlignment="Left" Height="39" Margin="57,10,0,0" VerticalAlignment="Top" Width="112" Grid.Column="1"/>
         <Button x:Name="ujBajnoksag" Content="Új bajnokság" HorizontalAlignment="Left" Height="39" Margin="193,10,0,0" VerticalAlignment="Top" Width="104" Grid.Column="1"/>
+        <Rectangle x:Name="csiga1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="84" Margin="10,79,0,0" Stroke="Black" VerticalAlignment="Top" Width="96"/>
+        <Rectangle x:Name="csiga2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="84" Margin="10,163,0,0" Stroke="Black" VerticalAlignment="Top" Width="96"/>
+        <Rectangle x:Name="csiga3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="86" Margin="10,247,0,0" Stroke="Black" VerticalAlignment="Top" Width="96"/>
 
     </Grid>
 </Window>
