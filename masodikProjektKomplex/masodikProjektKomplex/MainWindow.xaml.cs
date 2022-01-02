@@ -50,6 +50,7 @@ namespace masodikProjektKomplex
             {
                 ImageSource = new BitmapImage(new Uri(@"harmadikPalya.png", UriKind.Relative))
             };
+            elsoNev.Content = Window.NameProperty;
         }
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -96,6 +97,7 @@ namespace masodikProjektKomplex
             csigaMozgasa1.Start();
 
         }
+
 
 
     }
