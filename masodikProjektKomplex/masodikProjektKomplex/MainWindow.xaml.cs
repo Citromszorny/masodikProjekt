@@ -50,7 +50,6 @@ namespace masodikProjektKomplex
             {
                 ImageSource = new BitmapImage(new Uri(@"harmadikPalya.png", UriKind.Relative))
             };
-            elsoNev.Content = Window.NameProperty;
         }
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -87,7 +86,6 @@ namespace masodikProjektKomplex
             {
                 csiga3.Margin = new Thickness(szam6 += szam3, 247, 0, 0);
             }
-
         } 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
