@@ -23,6 +23,7 @@ namespace masodikProjektKomplex
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -50,8 +51,21 @@ namespace masodikProjektKomplex
             {
                 ImageSource = new BitmapImage(new Uri(@"harmadikPalya.png", UriKind.Relative))
             };
+            
+            
         }
-        private void timer_Tick(object sender, EventArgs e)
+
+        private void Start_Click(object sender, RoutedEventArgs e)
+        {
+            DispatcherTimer csigaMozgasa1 = new DispatcherTimer();
+            csigaMozgasa1.Tick += timer_Tick;
+            csigaMozgasa1.Interval = TimeSpan.FromMilliseconds(100);
+            csigaMozgasa1.Start();
+
+
+        }
+
+        void timer_Tick(object sender, EventArgs e)
         {
             DispatcherTimer csigaMozgasa1 = new DispatcherTimer();
             Random rnd = new Random();
@@ -61,42 +75,58 @@ namespace masodikProjektKomplex
             double szam4 = csiga1.Margin.Left + szam;
             double szam5 = csiga2.Margin.Left + szam2;
             double szam6 = csiga3.Margin.Left + szam3;
-
-            if (csiga1.Margin.Left >= 440)
+            
+            if (csiga1.Margin.Left >= 525)
             {
+
+                if (csiga1.Margin.Left > 525)
+                {
+                    csiga1.Margin = new Thickness(525, 79, 0, 0);
+
+
+                }
+                
                 csigaMozgasa1.Stop();
+
             }
             else
             {
                 csiga1.Margin = new Thickness(szam4 += szam, 79, 0, 0);
             }
-            if (csiga2.Margin.Left >= 440)
+
+            if (csiga2.Margin.Left >= 525)
             {
+
+                if (csiga2.Margin.Left > 525)
+                {
+                    csiga2.Margin = new Thickness(525, 163, 0, 0);
+
+                }
+                
+                
                 csigaMozgasa1.Stop();
             }
             else
             {
                 csiga2.Margin = new Thickness(szam5 += szam2, 163, 0, 0);
             }
-            if (csiga3.Margin.Left >= 440)
+
+            if (csiga3.Margin.Left >= 525)
             {
+
+                if (csiga3.Margin.Left > 525)
+                {
+                    csiga3.Margin = new Thickness(525, 247, 0, 0);
+
+                }
+                
                 csigaMozgasa1.Stop();
+
             }
             else
             {
                 csiga3.Margin = new Thickness(szam6 += szam3, 247, 0, 0);
             }
-        } 
-        private void Start_Click(object sender, RoutedEventArgs e)
-        {
-            DispatcherTimer csigaMozgasa1 = new DispatcherTimer();
-            csigaMozgasa1.Tick += timer_Tick;
-            csigaMozgasa1.Interval = TimeSpan.FromMilliseconds(100);
-            csigaMozgasa1.Start();
-
         }
-
-
-
     }
 }

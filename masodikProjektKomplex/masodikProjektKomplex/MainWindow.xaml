@@ -17,7 +17,7 @@
         <Button x:Name="Start" Content="Start" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="39" Width="96" Grid.ColumnSpan="2" Click="Start_Click"/>
         <Button x:Name="ujFutam" Content="Új futam" HorizontalAlignment="Left" Height="39" Margin="57,10,0,0" VerticalAlignment="Top" Width="112" Grid.Column="1"/>
         <Button x:Name="ujBajnoksag" Content="Új bajnokság" HorizontalAlignment="Left" Height="39" Margin="193,10,0,0" VerticalAlignment="Top" Width="104" Grid.Column="1"/>
-        <Rectangle x:Name="csiga1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="84" Margin="10,79,0,0" Stroke="Black" VerticalAlignment="Top" Width="96"/>
+        <Rectangle x:Name="csiga1" HorizontalAlignment="Left" Height="84" Margin="10,79,0,0" Stroke="Black" VerticalAlignment="Top" Width="96" Grid.ColumnSpan="2"/>
         <Rectangle x:Name="csiga2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="84" Margin="10,163,0,0" Stroke="Black" VerticalAlignment="Top" Width="96"/>
         <Rectangle x:Name="csiga3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="86" Margin="10,247,0,0" Stroke="Black" VerticalAlignment="Top" Width="96"/>
         <Label Content="A bajnokság állása:&#xD;&#xA;" HorizontalAlignment="Left" Height="42" Margin="10,338,0,0" VerticalAlignment="Top" Width="138" Grid.ColumnSpan="2"/>
@@ -36,5 +36,8 @@
         <Label x:Name="elsoHelyezese" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="245,369,0,0" VerticalAlignment="Top" Width="72"/>
         <Label x:Name="masodikHelyezese" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="227,399,0,0" VerticalAlignment="Top" Width="90"/>
         <Label x:Name="harmadikHelyezese" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="232,434,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="helyezes" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="347,102,0,0" VerticalAlignment="Top" Width="152"/>
+        <Label x:Name="helyezes2" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="35" Margin="347,186,0,0" VerticalAlignment="Top" Width="152"/>
+        <Label x:Name="helyezes3" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="35" Margin="363,276,0,0" VerticalAlignment="Top" Width="136"/>
     </Grid>
 </Window>
