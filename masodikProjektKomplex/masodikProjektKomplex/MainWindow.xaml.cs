@@ -23,9 +23,16 @@ namespace masodikProjektKomplex
     /// </summary>
     public partial class MainWindow : Window
     {
+
         DispatcherTimer csigaMozgasa1 = new DispatcherTimer();
         int valami = 1;
         List<Brush> helyezesek123 = new List<Brush>();
+        List<string> csiganevHelyezesek = new List<string>() { "", "", "" };
+        int[,] hanyszorMilyenHelyezes = new int[3, 3];
+        bool elso = false;
+        bool masodik = false;
+        bool harmadik = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -53,9 +60,9 @@ namespace masodikProjektKomplex
             harmadikPalya.Fill = new ImageBrush
             {
                 ImageSource = new BitmapImage(new Uri(@"harmadikPalya.png", UriKind.Relative))
-            };   
+            };
             csigaMozgasa1.Tick += timer_Tick;
-            csigaMozgasa1.Interval = TimeSpan.FromMilliseconds(100);   
+            csigaMozgasa1.Interval = TimeSpan.FromMilliseconds(100);
         }
         private void Start_Click(object sender, RoutedEventArgs e)
         {
@@ -80,12 +87,42 @@ namespace masodikProjektKomplex
             {
                 if (csiga1.Margin.Left > 525)
                 {
-                    csiga1.Margin = new Thickness(525, 79, 0, 0);              
+                    if (elso == false)
+                    {
+                        elso = true;
+                        csiganevHelyezesek[0] = csiga1.Name;
+                        hanyszorMilyenHelyezes[0, 0]++;
+
+                    }
+                    else
+                    {
+                        if (elso == true && masodik == false)
+                        {
+                            masodik = true;
+                            csiganevHelyezesek[1] = csiga1.Name;
+                            hanyszorMilyenHelyezes[0, 1]++;
+                        }
+                        else
+                        {
+                            if (elso == true && masodik == true && harmadik == false)
+                            {
+
+                                hanyszorMilyenHelyezes[0, 2]++;
+                                csiganevHelyezesek[2] = csiga1.Name;
+                                MessageBox.Show(csiganevHelyezesek[0] + " " + csiganevHelyezesek[1] + " " + csiganevHelyezesek[2]);
+                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[0, 0] + " " + hanyszorMilyenHelyezes[0, 1] + " " + hanyszorMilyenHelyezes[0, 2]));
+                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[1, 0] + " " + hanyszorMilyenHelyezes[1, 1] + " " + hanyszorMilyenHelyezes[1, 2]));
+                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[2, 0] + " " + hanyszorMilyenHelyezes[2, 1] + " " + hanyszorMilyenHelyezes[2, 2]));
+                            }
+                        }
+                    }
+                    csiga1.Margin = new Thickness(525, 79, 0, 0);
                     ujFutam.IsEnabled = true;
                     ujBajnoksag.IsEnabled = true;
                     Start.IsEnabled = true;
                     helyezes.Content = valami++;
                     elsoPalya.Fill = helyezesek123[valami + 1];
+
                 }
             }
             else
@@ -96,6 +133,33 @@ namespace masodikProjektKomplex
             {
                 if (csiga2.Margin.Left > 525)
                 {
+                    if (elso == false)
+                    {
+                        elso = true;
+                        hanyszorMilyenHelyezes[1, 0]++;
+                        csiganevHelyezesek[0] = csiga2.Name;
+                    }
+                    else
+                    {
+                        if (elso == true && masodik == false)
+                        {
+                            masodik = true;
+                            hanyszorMilyenHelyezes[1, 1]++;
+                            csiganevHelyezesek[1] = csiga2.Name;
+                        }
+                        else
+                        {
+                            if (elso == true && masodik == true && harmadik == false)
+                            {
+                                hanyszorMilyenHelyezes[1, 2]++;
+                                csiganevHelyezesek[2] = csiga2.Name;
+                                MessageBox.Show(csiganevHelyezesek[0] + " " + csiganevHelyezesek[1] + " " + csiganevHelyezesek[2]);
+                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[0, 0] + " " + hanyszorMilyenHelyezes[0, 1] + " " + hanyszorMilyenHelyezes[0, 2]));
+                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[1, 0] + " " + hanyszorMilyenHelyezes[1, 1] + " " + hanyszorMilyenHelyezes[1, 2]));
+                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[2, 0] + " " + hanyszorMilyenHelyezes[2, 1] + " " + hanyszorMilyenHelyezes[2, 2]));
+                            }
+                        }
+                    }
                     csiga2.Margin = new Thickness(525, 163, 0, 0);
                     helyezes2.Content = valami++;
                     masodikPalya.Fill = helyezesek123[valami + 1];
@@ -109,9 +173,38 @@ namespace masodikProjektKomplex
             {
                 if (csiga3.Margin.Left > 525)
                 {
+                    if (elso == false)
+                    {
+                        hanyszorMilyenHelyezes[2, 0]++;
+                        elso = true;
+                        csiganevHelyezesek[0] = csiga3.Name;
+                    }
+                    else
+                    {
+                        if (elso == true && masodik == false)
+                        {
+                            hanyszorMilyenHelyezes[2, 1]++;
+                            masodik = true;
+                            csiganevHelyezesek[1] = csiga3.Name;
+                        }
+                        else
+                        {
+                            if (elso == true && masodik == true && harmadik == false)
+                            {
+
+                                csiganevHelyezesek[2] = csiga3.Name;
+                                hanyszorMilyenHelyezes[2, 2]++;
+                                MessageBox.Show(csiganevHelyezesek[0] + " " + csiganevHelyezesek[1] + " " + csiganevHelyezesek[2]);
+                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[0, 0] + " " + hanyszorMilyenHelyezes[0, 1] + " " + hanyszorMilyenHelyezes[0, 2]));
+                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[1, 0] + " " + hanyszorMilyenHelyezes[1, 1] + " " + hanyszorMilyenHelyezes[1, 2]));
+                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[2, 0] + " " + hanyszorMilyenHelyezes[2, 1] + " " + hanyszorMilyenHelyezes[2, 2]));
+                            }
+                        }
+                    }
                     csiga3.Margin = new Thickness(525, 247, 0, 0);
                     helyezes3.Content = valami++;
                     harmadikPalya.Fill = helyezesek123[valami + 1];
+
                 }
             }
             else
@@ -127,6 +220,13 @@ namespace masodikProjektKomplex
             helyezes.Content = "";
             helyezes2.Content = "";
             helyezes3.Content = "";
+            elso = false;
+            masodik = false;
+            harmadik = false;
+            csiganevHelyezesek[0] = "";
+            csiganevHelyezesek[1] = "";
+            csiganevHelyezesek[2] = "";
+
             valami = 1;
             elsoPalya.Fill = new ImageBrush
             {
@@ -140,7 +240,9 @@ namespace masodikProjektKomplex
             {
                 ImageSource = new BitmapImage(new Uri(@"harmadikPalya.png", UriKind.Relative))
             };
+
             csigaMozgasa1.Stop();
+
         }
         private void ujBajnoksag_Click(object sender, RoutedEventArgs e)
         {
