@@ -35,7 +35,7 @@
         <Label Content="1." Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="235,338,0,0" VerticalAlignment="Top" Width="52"/>
         <Label Content="2." Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="287,338,0,0" VerticalAlignment="Top" Width="54"/>
         <Label Content="3." Grid.Column="1" HorizontalAlignment="Center" Height="28" Margin="0,338,0,0" VerticalAlignment="Top" Width="58"/>
-        <Label x:Name="elsoHanyadikElso" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="225,366,0,0" VerticalAlignment="Top" Width="54"/>
+        <Label x:Name="elsoHanyszorElso" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="225,366,0,0" VerticalAlignment="Top" Width="54"/>
         <Label x:Name="elsoHanyadikMasodik" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="270,362,0,0" VerticalAlignment="Top" Width="64"/>
         <Label x:Name="elsoHanyadikHarmadik" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="35" Margin="314,365,0,0" VerticalAlignment="Top" Width="82"/>
         <Label x:Name="masodikHanyadikElso" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="225,397,0,0" VerticalAlignment="Top" Width="54"/>

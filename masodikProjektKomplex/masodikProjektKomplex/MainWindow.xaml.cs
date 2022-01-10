@@ -106,13 +106,10 @@ namespace masodikProjektKomplex
                         {
                             if (elso == true && masodik == true && harmadik == false)
                             {
-
+                                harmadik = true;
                                 hanyszorMilyenHelyezes[0, 2]++;
                                 csiganevHelyezesek[2] = csiga1.Name;
-                                MessageBox.Show(csiganevHelyezesek[0] + " " + csiganevHelyezesek[1] + " " + csiganevHelyezesek[2]);
-                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[0, 0] + " " + hanyszorMilyenHelyezes[0, 1] + " " + hanyszorMilyenHelyezes[0, 2]));
-                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[1, 0] + " " + hanyszorMilyenHelyezes[1, 1] + " " + hanyszorMilyenHelyezes[1, 2]));
-                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[2, 0] + " " + hanyszorMilyenHelyezes[2, 1] + " " + hanyszorMilyenHelyezes[2, 2]));
+
                             }
                         }
                     }
@@ -151,12 +148,10 @@ namespace masodikProjektKomplex
                         {
                             if (elso == true && masodik == true && harmadik == false)
                             {
+                                harmadik = true;
                                 hanyszorMilyenHelyezes[1, 2]++;
                                 csiganevHelyezesek[2] = csiga2.Name;
-                                MessageBox.Show(csiganevHelyezesek[0] + " " + csiganevHelyezesek[1] + " " + csiganevHelyezesek[2]);
-                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[0, 0] + " " + hanyszorMilyenHelyezes[0, 1] + " " + hanyszorMilyenHelyezes[0, 2]));
-                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[1, 0] + " " + hanyszorMilyenHelyezes[1, 1] + " " + hanyszorMilyenHelyezes[1, 2]));
-                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[2, 0] + " " + hanyszorMilyenHelyezes[2, 1] + " " + hanyszorMilyenHelyezes[2, 2]));
+
                             }
                         }
                     }
@@ -191,13 +186,10 @@ namespace masodikProjektKomplex
                         {
                             if (elso == true && masodik == true && harmadik == false)
                             {
-
+                                harmadik = true;
                                 csiganevHelyezesek[2] = csiga3.Name;
                                 hanyszorMilyenHelyezes[2, 2]++;
-                                MessageBox.Show(csiganevHelyezesek[0] + " " + csiganevHelyezesek[1] + " " + csiganevHelyezesek[2]);
-                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[0, 0] + " " + hanyszorMilyenHelyezes[0, 1] + " " + hanyszorMilyenHelyezes[0, 2]));
-                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[1, 0] + " " + hanyszorMilyenHelyezes[1, 1] + " " + hanyszorMilyenHelyezes[1, 2]));
-                                MessageBox.Show(Convert.ToString(hanyszorMilyenHelyezes[2, 0] + " " + hanyszorMilyenHelyezes[2, 1] + " " + hanyszorMilyenHelyezes[2, 2]));
+
                             }
                         }
                     }
@@ -211,6 +203,27 @@ namespace masodikProjektKomplex
             {
                 csiga3.Margin = new Thickness(szam6 += szam3, 247, 0, 0);
             }
+            if (harmadik == true)
+            {
+                elsoHanyszorElso.Content = hanyszorMilyenHelyezes[0, 0];
+                elsoHanyadikMasodik.Content = hanyszorMilyenHelyezes[0, 1];
+                elsoHanyadikHarmadik.Content = hanyszorMilyenHelyezes[0, 2];
+                masodikHanyadikElso.Content = hanyszorMilyenHelyezes[1, 0];
+                masodikHanyadikMasodik.Content = hanyszorMilyenHelyezes[1, 1];
+                masodikHanyadikHarmadik.Content = hanyszorMilyenHelyezes[1, 2];
+                harmadikHanyadikElso.Content = hanyszorMilyenHelyezes[1, 2];
+                HarmadikHanyadikMasodik.Content = hanyszorMilyenHelyezes[2, 1];
+                HarmadikHanyadikHarmadik.Content = hanyszorMilyenHelyezes[2, 2];
+                masodikPont.Content = hanyszorMilyenHelyezes[1, 0] * 3 + hanyszorMilyenHelyezes[1, 1] * 2 + hanyszorMilyenHelyezes[1, 2];
+                harmadikPont.Content = hanyszorMilyenHelyezes[2, 0] * 3 + hanyszorMilyenHelyezes[2, 1] * 2 + hanyszorMilyenHelyezes[2, 2];
+                pontElso.Content = hanyszorMilyenHelyezes[0, 0] * 3 + hanyszorMilyenHelyezes[0, 1] * 2 + hanyszorMilyenHelyezes[0, 2];
+
+            }
+
+        }
+        private void PontKiiro()
+        {
+
         }
         private void ujFutam_Click(object sender, RoutedEventArgs e)
         {
@@ -247,8 +260,15 @@ namespace masodikProjektKomplex
         private void ujBajnoksag_Click(object sender, RoutedEventArgs e)
         {
             ujFutam_Click(null, null);
-            
-            MessageBox.Show("xd", "állás");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    hanyszorMilyenHelyezes[i, j] = 0;
+                }
+            }
+            InitializeComponent();
         }
+
     }
 }
