@@ -17,9 +17,9 @@
         <Button x:Name="Start" Content="Start" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="39" Width="96" Grid.ColumnSpan="2" Click="Start_Click"/>
         <Button x:Name="ujFutam" Content="Új futam" HorizontalAlignment="Left" Height="39" Margin="57,10,0,0" VerticalAlignment="Top" Width="112" Grid.Column="1" Click="ujFutam_Click"/>
         <Button x:Name="ujBajnoksag" Content="Új bajnokság" HorizontalAlignment="Left" Height="39" Margin="193,10,0,0" VerticalAlignment="Top" Width="104" Grid.Column="1" Click="ujBajnoksag_Click"/>
-        <Rectangle x:Name="csiga1" HorizontalAlignment="Left" Height="84" Margin="10,79,0,0" Stroke="Black" VerticalAlignment="Top" Width="96" Grid.ColumnSpan="2"/>
-        <Rectangle x:Name="csiga2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="84" Margin="10,163,0,0" Stroke="Black" VerticalAlignment="Top" Width="96"/>
-        <Rectangle x:Name="csiga3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="86" Margin="10,247,0,0" Stroke="Black" VerticalAlignment="Top" Width="96"/>
+        <Rectangle x:Name="csiga1" HorizontalAlignment="Left" Height="84" Margin="10,79,0,0" VerticalAlignment="Top" Width="96" Grid.ColumnSpan="2"/>
+        <Rectangle x:Name="csiga2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="84" Margin="10,163,0,0" VerticalAlignment="Top" Width="96"/>
+        <Rectangle x:Name="csiga3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="86" Margin="10,247,0,0" VerticalAlignment="Top" Width="96"/>
         <Label Content="A bajnokság állása:&#xD;&#xA;" HorizontalAlignment="Left" Height="42" Margin="10,338,0,0" VerticalAlignment="Top" Width="138" Grid.ColumnSpan="2"/>
         <Label Content="Hely" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="74,338,0,0" VerticalAlignment="Top" Width="111"/>
         <Label Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="169,338,0,0" VerticalAlignment="Top" Width="88" Content="Név"/>

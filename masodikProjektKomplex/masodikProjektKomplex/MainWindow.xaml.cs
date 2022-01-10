@@ -25,6 +25,13 @@ namespace masodikProjektKomplex
     {
 
         DispatcherTimer csigaMozgasa1 = new DispatcherTimer();
+        int pont = 0;
+        List<Rectangle> csigak = new List<Rectangle>();
+        bool elso = false;
+        bool masodik = false;
+        bool harmadik = false;
+        List<int> Helyezettek = new List<int>();
+     
         public MainWindow()
         {
             InitializeComponent();
@@ -71,7 +78,8 @@ namespace masodikProjektKomplex
 
         void timer_Tick(object sender, EventArgs e)
         {
-            DispatcherTimer csigaMozgasa1 = new DispatcherTimer();
+
+            
             Random rnd = new Random();
             int szam = rnd.Next(0, 10);
             int szam2 = rnd.Next(0, 10);
@@ -79,8 +87,9 @@ namespace masodikProjektKomplex
             double szam4 = csiga1.Margin.Left + szam;
             double szam5 = csiga2.Margin.Left + szam2;
             double szam6 = csiga3.Margin.Left + szam3;
-            double szam7 = csiga3.Margin.Left;
             
+
+
             if (csiga1.Margin.Left >= 525)
             {
 
@@ -106,9 +115,7 @@ namespace masodikProjektKomplex
                 if (csiga2.Margin.Left > 525)
                 {
                     csiga2.Margin = new Thickness(525, 163, 0, 0);
-                    ujFutam.IsEnabled = true;
-                    ujBajnoksag.IsEnabled = true;
-                    Start.IsEnabled = true;
+                    
                 }
 
 
@@ -125,9 +132,7 @@ namespace masodikProjektKomplex
                 if (csiga3.Margin.Left > 525)
                 {
                     csiga3.Margin = new Thickness(525, 247, 0, 0);
-                    ujFutam.IsEnabled = true;
-                    ujBajnoksag.IsEnabled = true;
-                    Start.IsEnabled = true;
+                    
                 }
 
                 
@@ -137,9 +142,9 @@ namespace masodikProjektKomplex
                 csiga3.Margin = new Thickness(szam6 += szam3, 247, 0, 0);
             }
 
-            csigaMozgasa1.Stop();
-            
+
         }
+
 
         private void ujFutam_Click(object sender, RoutedEventArgs e)
         {
@@ -167,6 +172,7 @@ namespace masodikProjektKomplex
             elsoPont.Content = "";
             masodikPont.Content = "";
             harmadikPont.Content = "";
+            MessageBox.Show("xd", "állás");
         }
     }
 }
