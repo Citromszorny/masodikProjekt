@@ -247,7 +247,7 @@ namespace masodikProjektKomplex
         private void ujBajnoksag_Click(object sender, RoutedEventArgs e)
         {
             ujFutam_Click(null, null);
-            bajnoksag.Content = "";
+            
             MessageBox.Show("xd", "állás");
         }
     }
