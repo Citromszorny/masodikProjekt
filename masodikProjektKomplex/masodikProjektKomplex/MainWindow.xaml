@@ -21,32 +21,9 @@
         <Rectangle x:Name="csiga2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="84" Margin="10,163,0,0" VerticalAlignment="Top" Width="96"/>
         <Rectangle x:Name="csiga3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="86" Margin="10,247,0,0" VerticalAlignment="Top" Width="96"/>
         <Label Content="A bajnokság állása:&#xD;&#xA;" HorizontalAlignment="Left" Height="42" Margin="10,338,0,0" VerticalAlignment="Top" Width="138" Grid.ColumnSpan="2"/>
-        <Label Content="Hely" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="74,338,0,0" VerticalAlignment="Top" Width="111"/>
-        <Label Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="169,338,0,0" VerticalAlignment="Top" Width="88" Content="Név"/>
-        <Label Content="1." Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="245,339,0,0" VerticalAlignment="Top" Width="27"/>
-        <Label Content="2." Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="284,339,0,0" VerticalAlignment="Top" Width="37" RenderTransformOrigin="0.373,0.444"/>
-        <Label Content="3." Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="326,339,0,0" VerticalAlignment="Top" Width="37"/>
-        <Label Content="Pont" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="427,338,0,0" VerticalAlignment="Top" Width="72"/>
-        <Label Content="1." Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="74,368,0,0" VerticalAlignment="Top" Width="72"/>
-        <Label Content="2." Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="75,397,0,0" VerticalAlignment="Top" Width="94"/>
-        <Label Content="3." Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="74,427,0,0" VerticalAlignment="Top" Width="90"/>
-        <Label x:Name="elsoNev" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="169,375,0,0" VerticalAlignment="Top" Width="63"/>
-        <Label x:Name="masodikNeve" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="169,396,0,0" VerticalAlignment="Top" Width="63"/>
-        <Label x:Name="harmadikNeve" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="169,427,0,0" VerticalAlignment="Top" Width="63"/>
-        <Label x:Name="elsoHelyezese" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="241,371,0,0" VerticalAlignment="Top" Width="31"/>
-        <Label x:Name="masodikHelyezese" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="241,399,0,0" VerticalAlignment="Top" Width="31"/>
-        <Label x:Name="harmadikHelyezese" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="241,432,0,0" VerticalAlignment="Top" Width="31"/>
-        <Label x:Name="helyezes" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="347,102,0,0" VerticalAlignment="Top" Width="152"/>
-        <Label x:Name="helyezes2" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="35" Margin="347,186,0,0" VerticalAlignment="Top" Width="152"/>
-        <Label x:Name="helyezes3" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="36" Margin="326,272,0,0" VerticalAlignment="Top" Width="136"/>
-        <Label x:Name="masodikHelyezes" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="289,370,0,0" VerticalAlignment="Top" Width="37"/>
-        <Label x:Name="masodkMasodikHelyezes" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="289,397,0,0" VerticalAlignment="Top" Width="37"/>
-        <Label x:Name="harmadikMasodikHelyezes" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="289,427,0,0" VerticalAlignment="Top" Width="37"/>
-        <Label x:Name="elsoHarmadikHelyezes" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="326,371,0,0" VerticalAlignment="Top" Width="37"/>
-        <Label x:Name="masodikHarmadikHelyezes" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="326,397,0,0" VerticalAlignment="Top" Height="30" Width="37"/>
-        <Label x:Name="harmadikHarmadikHelyezes" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="326,425,0,0" VerticalAlignment="Top" Width="37"/>
-        <Label x:Name="elsoPont" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="431,375,0,0" VerticalAlignment="Top" Width="68"/>
-        <Label x:Name="masodikPont" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="431,398,0,0" VerticalAlignment="Top" Width="68"/>
-        <Label x:Name="harmadikPont" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="431,433,0,0" VerticalAlignment="Top" Width="68"/>
+        <Label x:Name="helyezes" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="79" Margin="347,79,0,0" VerticalAlignment="Top" Width="152" FontSize="48" FontFamily="Times New Roman"/>
+        <Label x:Name="helyezes2" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="74" Margin="347,168,0,0" VerticalAlignment="Top" Width="152" FontFamily="Times New Roman" FontSize="48"/>
+        <Label x:Name="helyezes3" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="81" Margin="347,252,0,0" VerticalAlignment="Top" Width="152" FontFamily="Times New Roman" FontSize="48"/>
+        <Label x:Name="bajnoksag" Content="Hely&#x9;Név&#x9;&#x9;1.&#x9;2.&#x9;3.&#x9;&#x9;Pont&#xD;&#xA;1.&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.&#xD;&#xA;2.&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;3.&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;" Grid.Column="1" HorizontalAlignment="Left" Height="89" Margin="88,341,0,0" VerticalAlignment="Top" Width="458"/>
     </Grid>
 </Window>

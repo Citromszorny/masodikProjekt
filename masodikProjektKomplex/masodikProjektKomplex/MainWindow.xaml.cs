@@ -23,17 +23,9 @@ namespace masodikProjektKomplex
     /// </summary>
     public partial class MainWindow : Window
     {
-
         DispatcherTimer csigaMozgasa1 = new DispatcherTimer();
-        /*int pont = 0;
-        List<Rectangle> csigak = new List<Rectangle>();
-        bool elso = false;
-        bool masodik = false;
-        bool harmadik = false;
-        List<int> Helyezettek = new List<int>();*/
         int valami = 1;
         List<Brush> helyezesek123 = new List<Brush>();
-        
         public MainWindow()
         {
             InitializeComponent();
@@ -61,25 +53,17 @@ namespace masodikProjektKomplex
             harmadikPalya.Fill = new ImageBrush
             {
                 ImageSource = new BitmapImage(new Uri(@"harmadikPalya.png", UriKind.Relative))
-            };
-
-            
+            };   
             csigaMozgasa1.Tick += timer_Tick;
-            csigaMozgasa1.Interval = TimeSpan.FromMilliseconds(100);
-            
-            
+            csigaMozgasa1.Interval = TimeSpan.FromMilliseconds(100);   
         }
-
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            
             csigaMozgasa1.Start();
             ujFutam.IsEnabled = false;
             ujBajnoksag.IsEnabled = false;
             Start.IsEnabled = false;
-
         }
-
         void timer_Tick(object sender, EventArgs e)
         {
             Random rnd = new Random();
@@ -92,34 +76,14 @@ namespace masodikProjektKomplex
             helyezesek123.Add(Brushes.Gold);
             helyezesek123.Add(Brushes.Silver);
             helyezesek123.Add(Brushes.SandyBrown);
-            
-            
             if (csiga1.Margin.Left >= 525)
             {
                 if (csiga1.Margin.Left > 525)
                 {
-                    csiga1.Margin = new Thickness(525, 79, 0, 0);
-                    
-                    
+                    csiga1.Margin = new Thickness(525, 79, 0, 0);              
                     ujFutam.IsEnabled = true;
                     ujBajnoksag.IsEnabled = true;
                     Start.IsEnabled = true;
-                    if (valami == 1)
-                    {
-                        elsoHelyezese.Content = 1;
-                        elsoNev.Content = "csiga1";
-                    }
-                    if (valami == 2)
-                    {
-                        masodkMasodikHelyezes.Content = 1;
-                        
-                        masodikNeve.Content = "csiga1";
-                    }
-                    if (valami == 3)
-                    {
-                        harmadikHarmadikHelyezes.Content = 1;
-                        harmadikNeve.Content = "csiga1";
-                    }
                     helyezes.Content = valami++;
                     elsoPalya.Fill = helyezesek123[valami + 1];
                 }
@@ -128,73 +92,32 @@ namespace masodikProjektKomplex
             {
                 csiga1.Margin = new Thickness(szam4 += szam, 79, 0, 0);
             }
-
             if (csiga2.Margin.Left >= 525)
             {
                 if (csiga2.Margin.Left > 525)
                 {
                     csiga2.Margin = new Thickness(525, 163, 0, 0);
-                    
-                    
-                    if (valami == 1)
-                    {
-                        elsoHelyezese.Content = 1;
-                        elsoNev.Content = "csiga2";
-                    }
-                    if (valami == 2)
-                    {
-                        masodkMasodikHelyezes.Content = 1;
-                        masodikNeve.Content = "csiga2";
-                    }
-                    if (valami == 3)
-                    {
-                        harmadikHarmadikHelyezes.Content = 1;
-                        harmadikNeve.Content = "csiga2";
-                    }
                     helyezes2.Content = valami++;
                     masodikPalya.Fill = helyezesek123[valami + 1];
-
                 }
-
             }
-            
             else
             {
                 csiga2.Margin = new Thickness(szam5 += szam2, 163, 0, 0);
             }
             if (csiga3.Margin.Left >= 525)
             {
-
                 if (csiga3.Margin.Left > 525)
                 {
                     csiga3.Margin = new Thickness(525, 247, 0, 0);
-                    
-                    
-                    if (valami == 1)
-                    {
-                        elsoHelyezese.Content = 1;
-                        elsoNev.Content = "csiga3";
-                    }
-                    if (valami == 2)
-                    {
-                        masodkMasodikHelyezes.Content = 1;
-                        masodikNeve.Content = "csiga3";
-                    }
-                    if (valami == 3)
-                    {
-                        harmadikHarmadikHelyezes.Content = 1;
-                        harmadikNeve.Content = "csiga3";
-                    }
                     helyezes3.Content = valami++;
                     harmadikPalya.Fill = helyezesek123[valami + 1];
                 }
             }
-           
             else
             {
                 csiga3.Margin = new Thickness(szam6 += szam3, 247, 0, 0);
             }
-            
         }
         private void ujFutam_Click(object sender, RoutedEventArgs e)
         {
@@ -222,22 +145,7 @@ namespace masodikProjektKomplex
         private void ujBajnoksag_Click(object sender, RoutedEventArgs e)
         {
             ujFutam_Click(null, null);
-            elsoNev.Content = "";
-            elsoHelyezese.Content = "";
-            masodikHelyezese.Content = "";
-            harmadikHelyezese.Content = "";
-            masodikNeve.Content = "";
-            harmadikNeve.Content = "";
-            masodikHarmadikHelyezes.Content = "";
-            elsoHarmadikHelyezes.Content = "";
-            masodikHarmadikHelyezes.Content = "";
-            harmadikHarmadikHelyezes.Content = "";
-            harmadikMasodikHelyezes.Content = "";
-            masodikHelyezes.Content = "";
-            masodkMasodikHelyezes.Content = "";
-            elsoPont.Content = "";
-            masodikPont.Content = "";
-            harmadikPont.Content = "";
+            bajnoksag.Content = "";
             MessageBox.Show("xd", "állás");
         }
     }
