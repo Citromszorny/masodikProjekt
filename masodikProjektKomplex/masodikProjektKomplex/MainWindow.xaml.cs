@@ -32,37 +32,18 @@ namespace masodikProjektKomplex
         bool elso = false;
         bool masodik = false;
         bool harmadik = false;
-
+        Brush sav1;
+        Brush sav2;
+        Brush sav3;
         public MainWindow()
         {
             InitializeComponent();
+            sav1 = elsoPalya.Fill;
+            sav2 = masodikPalya.Fill;
+            sav3 = harmadikPalya.Fill;
             ujFutam.IsEnabled = false;
-            csiga1.Fill = new ImageBrush
-            {
-                ImageSource = new BitmapImage(new Uri(@"csiga1.png", UriKind.Relative))
-            };
-            csiga2.Fill = new ImageBrush
-            {
-                ImageSource = new BitmapImage(new Uri(@"csiga2.png", UriKind.Relative))
-            };
-            csiga3.Fill = new ImageBrush
-            {
-                ImageSource = new BitmapImage(new Uri(@"csiga3.png", UriKind.Relative))
-            };
-            elsoPalya.Fill = new ImageBrush
-            {
-                ImageSource = new BitmapImage(new Uri(@"elsoPalya.png", UriKind.Relative))
-            };
-            masodikPalya.Fill = new ImageBrush
-            {
-                ImageSource = new BitmapImage(new Uri(@"masodikPalya.png", UriKind.Relative))
-            };
-            harmadikPalya.Fill = new ImageBrush
-            {
-                ImageSource = new BitmapImage(new Uri(@"harmadikPalya.png", UriKind.Relative))
-            };
             csigaMozgasa1.Tick += timer_Tick;
-            csigaMozgasa1.Interval = TimeSpan.FromMilliseconds(100);
+            csigaMozgasa1.Interval = TimeSpan.FromMilliseconds(25);
         }
         private void Start_Click(object sender, RoutedEventArgs e)
         {
@@ -224,6 +205,7 @@ namespace masodikProjektKomplex
         private void PontKiiro()
         {
 
+            MessageBox.Show($"Hely \t Név \t 1.\t2.\t 3. \t Pont \n 1. \t csiga1 \t {elsoHanyszorElso.Content} \t {elsoHanyadikMasodik.Content} \t {elsoHanyadikHarmadik.Content} \t {pontElso.Content} \n 2. \t csiga2 \t {masodikHanyadikElso.Content} \t {masodikHanyadikMasodik.Content} \t {masodikHanyadikHarmadik.Content} \t {masodikPont.Content} \n 3. \t csiga3 \t {harmadikHanyadikElso.Content} \t {HarmadikHanyadikMasodik.Content} \t {HarmadikHanyadikMasodik.Content} \t {harmadikPont.Content}");
         }
         private void ujFutam_Click(object sender, RoutedEventArgs e)
         {
@@ -239,21 +221,10 @@ namespace masodikProjektKomplex
             csiganevHelyezesek[0] = "";
             csiganevHelyezesek[1] = "";
             csiganevHelyezesek[2] = "";
-
             valami = 1;
-            elsoPalya.Fill = new ImageBrush
-            {
-                ImageSource = new BitmapImage(new Uri(@"elsoPalya.png", UriKind.Relative))
-            };
-            masodikPalya.Fill = new ImageBrush
-            {
-                ImageSource = new BitmapImage(new Uri(@"masodikPalya.png", UriKind.Relative))
-            };
-            harmadikPalya.Fill = new ImageBrush
-            {
-                ImageSource = new BitmapImage(new Uri(@"harmadikPalya.png", UriKind.Relative))
-            };
-
+            elsoPalya.Fill = sav1;
+            masodikPalya.Fill = sav2;
+            harmadikPalya.Fill = sav3;
             csigaMozgasa1.Stop();
 
         }
@@ -267,6 +238,20 @@ namespace masodikProjektKomplex
                     hanyszorMilyenHelyezes[i, j] = 0;
                 }
             }
+            PontKiiro();
+            elsoHanyszorElso.Content = "";
+            elsoHanyadikMasodik.Content = "";
+            elsoHanyadikHarmadik.Content = "";
+            masodikHanyadikElso.Content = "";
+            masodikHanyadikMasodik.Content = "";
+            masodikHanyadikHarmadik.Content = "";
+            harmadikHanyadikElso.Content = "";
+            HarmadikHanyadikMasodik.Content = "";
+            HarmadikHanyadikHarmadik.Content = "";
+            pontElso.Content = "";
+            masodikPont.Content = "";
+            harmadikPont.Content = "";
+            
             InitializeComponent();
         }
 
