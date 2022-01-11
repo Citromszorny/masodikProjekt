@@ -205,7 +205,7 @@ namespace masodikProjektKomplex
         private void PontKiiro()
         {
 
-            MessageBox.Show($"Hely \t Név \t 1.\t2.\t 3. \t Pont \n 1. \t csiga1 \t {elsoHanyszorElso.Content} \t {elsoHanyadikMasodik.Content} \t {elsoHanyadikHarmadik.Content} \t {pontElso.Content} \n 2. \t csiga2 \t {masodikHanyadikElso.Content} \t {masodikHanyadikMasodik.Content} \t {masodikHanyadikHarmadik.Content} \t {masodikPont.Content} \n 3. \t csiga3 \t {harmadikHanyadikElso.Content} \t {HarmadikHanyadikMasodik.Content} \t {HarmadikHanyadikMasodik.Content} \t {harmadikPont.Content}");
+            MessageBox.Show($"Hely \t Név \t 1.\t2.\t 3. \t Pont \n 1. \t csiga1 \t {elsoHanyszorElso.Content} \t {elsoHanyadikMasodik.Content} \t {elsoHanyadikHarmadik.Content} \t {pontElso.Content} \n 2. \t csiga2 \t {masodikHanyadikElso.Content} \t {masodikHanyadikMasodik.Content} \t {masodikHanyadikHarmadik.Content} \t {masodikPont.Content} \n 3. \t csiga3 \t {harmadikHanyadikElso.Content} \t {HarmadikHanyadikMasodik.Content} \t {HarmadikHanyadikMasodik.Content} \t {harmadikPont.Content}", "Bajnokság");
         }
         private void ujFutam_Click(object sender, RoutedEventArgs e)
         {
