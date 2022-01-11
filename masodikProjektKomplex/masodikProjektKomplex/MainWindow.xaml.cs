@@ -192,7 +192,7 @@ namespace masodikProjektKomplex
                 masodikHanyadikElso.Content = hanyszorMilyenHelyezes[1, 0];
                 masodikHanyadikMasodik.Content = hanyszorMilyenHelyezes[1, 1];
                 masodikHanyadikHarmadik.Content = hanyszorMilyenHelyezes[1, 2];
-                harmadikHanyadikElso.Content = hanyszorMilyenHelyezes[1, 2];
+                harmadikHanyadikElso.Content = hanyszorMilyenHelyezes[2, 0];
                 HarmadikHanyadikMasodik.Content = hanyszorMilyenHelyezes[2, 1];
                 HarmadikHanyadikHarmadik.Content = hanyszorMilyenHelyezes[2, 2];
                 masodikPont.Content = hanyszorMilyenHelyezes[1, 0] * 3 + hanyszorMilyenHelyezes[1, 1] * 2 + hanyszorMilyenHelyezes[1, 2];
